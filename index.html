@@ -9,7 +9,7 @@
   </head>
   <body>
     <main>
-      <label>Input: <input type="text" /></label>
+      <label>Input: <input type="text" name="newInput" id="newInput" /></label>
       <select name="dropDown" id="dropDown">
         <option value="1">
           If input is a first name: Make the first character in a name
@@ -37,8 +37,10 @@
           hyphen
         </option>
       </select>
-      <label>Output: <input type="text" /></label>
-      <button id="genOut">Generate Output</button>
+      <label
+        >Output: <input type="text" name="newOutput" id="newOutput"
+      /></label>
+      <button id="genOut" onclick="readInput()">Generate Output</button>
     </main>
     <script src="script.js"></script>
   </body>
