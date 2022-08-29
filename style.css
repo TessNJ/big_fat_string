@@ -1,0 +1,14 @@
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 40%;
+  align-items: flex-end;
+}
+
+main input {
+  width: 30vw;
+}
+
+main select {
+  width: 30vw;
+}
