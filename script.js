@@ -64,7 +64,7 @@ function appendOut() {
 
 function drop1() {
   outputText = inputText.charAt(0).toUpperCase() + inputText.slice(1);
-  console.log(outputText);
+  // console.log(outputText);
   appendOut();
 }
 
@@ -72,7 +72,7 @@ function drop1() {
 function drop2() {
   textArray = inputText.split(" ");
   outputText = textArray[0];
-  console.log(outputText);
+  // console.log(outputText);
   appendOut();
 }
 
@@ -110,7 +110,7 @@ function drop5() {
 function drop6() {
   // outputText = inputText.padEnd(inputText.length, "*");
   outputText = inputText.replace(/./g, "*");
-  console.log(outputText);
+  // console.log(outputText);
   appendOut();
 }
 
@@ -121,13 +121,13 @@ function drop7() {
     lowerCase.substring(0, 2) +
     lowerCase[2].toUpperCase() +
     lowerCase.substring(3);
-  console.log(outputText);
+  // console.log(outputText);
   appendOut();
 }
 
 //Drop 8
 function drop8() {
-  console.log("here");
+  // console.log("here");
   // outputText = "";
   // textArray = inputText.split(" ");
   // textArray.forEach((item) => {
