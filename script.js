@@ -9,6 +9,8 @@ let textArray;
 let outputText;
 let startIndex;
 let endIndex;
+let lowerCase;
+let upperCase;
 
 function readInput() {
   inputText = document.getElementById("newInput").value;
@@ -102,23 +104,24 @@ function drop5() {
   }
   appendOut();
 }
-//Drop 6
 
+//Drop 6
 function drop6() {
   // outputText = inputText.padEnd(inputText.length, "*");
   outputText = inputText.replace(/./g, "*");
   console.log(outputText);
   appendOut();
 }
+
 //Drop 7
 function drop7() {
-  textArray = inputText.split(" ");
-
-  // for (let outputText of textArray) {
-  //   outputText = outputText.charAt(2).replace(toUpperCase);
-  //   console.log(outputText);
-  // }
-  // appendOut();
+  lowerCase = inputText.toLowerCase();
+  outputText =
+    lowerCase.substring(0, 2) +
+    lowerCase[2].toUpperCase() +
+    lowerCase.substring(3);
+  console.log(outputText);
+  appendOut();
 }
 
 //Drop 8
