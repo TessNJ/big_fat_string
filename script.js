@@ -11,6 +11,8 @@ let startIndex;
 let endIndex;
 let lowerCase;
 let upperCase;
+let previousChar;
+let currentChar;
 
 function readInput() {
   inputText = document.getElementById("newInput").value;
@@ -25,7 +27,7 @@ function dropDownF() {
 }
 
 function dropHandle() {
-  console.log("here: " + inputText + " and " + dropResult);
+  // console.log("here: " + inputText + " and " + dropResult);
   if (dropResult == 1 && inputText.split(" ").length == 1) {
     drop1();
   } else if (dropResult == 2 && inputText.split(" ").length >= 3) {
@@ -45,7 +47,6 @@ function dropHandle() {
   } else if (dropResult == 6 && !inputText.includes(" ")) {
     drop6();
   } else if (dropResult == 7) {
-    console.log("hi");
     drop7();
   } else if (dropResult == 8) {
     drop8();
@@ -59,7 +60,7 @@ function appendOut() {
   document.getElementById("newOutput").value = outputText;
 }
 
-//Drop 1 section
+//Drop 1
 
 function drop1() {
   outputText = inputText.charAt(0).toUpperCase() + inputText.slice(1);
@@ -82,7 +83,7 @@ function drop3() {
   appendOut();
 }
 
-//Drop 4 ///NEED HELP///
+//Drop 4
 function drop4() {
   textArray = inputText.split(" ");
   outputText = textArray[1];
@@ -125,4 +126,23 @@ function drop7() {
 }
 
 //Drop 8
-function drop8() {}
+function drop8() {
+  console.log("here");
+  // outputText = "";
+  // textArray = inputText.split(" ");
+  // textArray.forEach((item) => {
+  //   upperCase = item[0].toUpperCase() + item.substring(1);
+  //   outputText += `${upperCase} `;
+  // });
+  outputText = inputText.substring(0, 1).toUpperCase();
+  for (let i = 1; i < inputText.length; i++) {
+    previousChar = inputText[i - 1];
+    if (previousChar === " " || previousChar === "-") {
+      currentChar = inputText[i].toUpperCase();
+    } else {
+      currentChar = inputText[i];
+    }
+    outputText += currentChar;
+  }
+  appendOut();
+}
